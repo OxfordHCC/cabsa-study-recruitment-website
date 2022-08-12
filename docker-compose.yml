@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    site:
+        container_name: cobsa-website
+        image: cobsa-website
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: always
+        ports:
+            - "8080:8080"
